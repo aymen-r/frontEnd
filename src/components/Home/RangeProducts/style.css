@@ -52,8 +52,9 @@
   font-weight: 500;
   background-color: rgb(71, 71, 71);
   color: rgb(255, 255, 255);
+  cursor: pointer;
 }
 .more-accessories button:hover {
   color: rgb(255, 255, 255);
-  background-color: #ff7004;
+  background-color: #ffce34;
 }

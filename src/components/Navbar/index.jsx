@@ -3,6 +3,10 @@ import { Link } from "react-router-dom";
 import NavCard from "./NavCard";
 import { data } from "./NavCard/data";
 import "./style.css";
+import { AiOutlineGlobal } from "react-icons/ai";
+import { RiProfileLine } from "react-icons/ri";
+import { IoIosArrowDown } from "react-icons/io";
+import SearchBox from "./SearchBox";
 
 const NavDesktop = () => {
   const [stick, setStick] = useState(false);
@@ -28,19 +32,44 @@ const NavDesktop = () => {
               </div>
             </Link>
           </div>
+          {/* <div className="search-box">
+            <button className="btn-search">
+              <i className="fas fa-search"></i>
+            </button>
+            <input
+              type="text"
+              className="input-search"
+              placeholder="Type to Search..."
+            />
+          </div> */}
+          {/* <div class="search__container">
+            <input class="search__input" type="text" placeholder="Search" />
+          </div> */}
+          <SearchBox />
           <div className="right flex">
-            <div className="search-box">
-              <button className="btn-search">
-                <i className="fas fa-search"></i>
-              </button>
-              <input
-                type="text"
-                className="input-search"
-                placeholder="Type to Search..."
+            <div className="nav-link-top flex">
+              <RiProfileLine
+                style={{ fontSize: "30px", color: "#ccc !important" }}
               />
-            </div>
-            <div className="nav-link-top">
               <span>About Us</span>
+            </div>
+            <div
+              className="nav-link-top flex lang"
+              onClick={() => setOpen(!open)}
+            >
+              <AiOutlineGlobal
+                style={{ fontSize: "30px", color: "#ccc !important" }}
+              />
+              <span>Language</span>
+
+              <IoIosArrowDown />
+              <ul
+                className={open ? "language-list lang-open" : "language-list"}
+              >
+                <li className="language-item">English</li>
+                <li className="language-item">French</li>
+                <li className="language-item">Arabic</li>
+              </ul>
             </div>
             <div className="nav-link-top">
               <span>Login</span>

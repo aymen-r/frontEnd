@@ -14,13 +14,14 @@
 }
 
 .counters i {
-  color: #ff7004;
+  color: #ffce34;
   margin-bottom: 5px;
 }
 
 .counters .counter {
   font-size: 45px;
   margin: 10px 0;
+  color: #ffce34;
 }
 
 @media (max-width: 700px) {

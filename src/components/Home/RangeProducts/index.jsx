@@ -3,6 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import React from "react";
 import ProductBlock from "./productBlock/ProductBlock";
 import "./style.css";
+import CountUp from "../Counter";
 export const categories = [
   {
     id: 1,
@@ -52,6 +53,7 @@ const RangeProducts = () => {
           the No1 of photovoltaic products. These solar inverters
         </p>
       </div>
+      <CountUp />
       <div className="more-accessories">
         <p className="text-base">
           Our product catalogue contains also - high-quality structure &

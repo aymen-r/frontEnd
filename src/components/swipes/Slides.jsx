@@ -35,17 +35,8 @@ const Slides = () => {
             }}
           >
             <div className="content">
-              <h3>
-                Thager alrafedain <br /> best services provider “Solar energy
-                Today’s resource for a brighter tomorrow!”
-              </h3>
-              <p>
-                Don’t wait be <br />
-                Check out our New products
-              </p>
-              <a href="#" className="btna">
-                get started
-              </a>
+              {/* <h3>Thager alrafedain</h3> */}
+              <img src="/images-logos/thager-sl-1.png" alt="" />
             </div>
           </section>
         </SwiperSlide>
@@ -59,38 +50,25 @@ const Slides = () => {
           >
             <div className="content">
               <h3>
-                Thager alrafedain <br />
                 best services provider “Solar energy Today’s resource for a
                 brighter tomorrow!”
               </h3>
-              <p>
-                Don’t wait be <br />
-                Check out our New products
-              </p>
-              <a href="#" className="btna">
-                get started
-              </a>
             </div>
           </section>
         </SwiperSlide>
         <SwiperSlide>
           {" "}
           <section
-            className="swiper-slide slide"
+            className="swiper-slide slide slide3"
             style={{
               background: `linear-gradient(to bottom, rgb(0 0 0 / 70%), rgb(0 0 0 / 40%)),url(${slide5}) no-repeat`,
             }}
           >
-            <div className="content">
+            <div className="content3">
               <h3>
-                Thager alrafedain <br />
-                best services provider “Solar energy Today’s resource for a
-                brighter tomorrow!”
+                Don’t wait to check <br />
+                out our New products
               </h3>
-              <p>
-                Don’t wait be <br />
-                Check out our New products
-              </p>
               <a href="#" className="btna">
                 get started
               </a>
