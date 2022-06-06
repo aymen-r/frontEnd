@@ -2,7 +2,7 @@ import React from "react";
 import { FaLocationArrow } from "react-icons/fa";
 import "./cardAdress.css";
 
-const CardAdress = () => {
+const CardAdress = ({ el }) => {
   return (
     <div className="box">
       <div className="head">
@@ -13,12 +13,9 @@ const CardAdress = () => {
         >
           <FaLocationArrow />
         </a>
-        <h2>Main Office</h2>
       </div>
-      <p>
-        THAGER AL RAFEDAIN GENERAL TRADING LLC Twin Tower _ Office 1504B (15
-        Floor) Baniyas Road,Deira, Dubai, UAE
-      </p>
+      <h2>{el.title}</h2>
+      <p>{el.text}</p>
     </div>
   );
 };
