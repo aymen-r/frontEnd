@@ -1,6 +1,6 @@
 .container {
   width: 100%;
-  position: relative;
+  /* position: relative; */
 }
 .image {
   opacity: 1;

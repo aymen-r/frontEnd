@@ -7,7 +7,7 @@ const ProductBlock = ({ element }) => {
   return (
     <div class="card">
       <figure class="card__thumb">
-        <img src={image} alt="Picture" class="card__image" />
+        <img src={image} alt="Pict" class="card__image" />
         <figcaption class="card__caption">
           <h2 class="card__title">{title}</h2>
 

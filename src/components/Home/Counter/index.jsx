@@ -1,7 +1,15 @@
 import React from "react";
 import "./style.css";
 import CountUp from "react-countup";
-import { GiEcology, GiSolarPower, GiGreenhouse } from "react-icons/gi";
+import {
+  GiEcology,
+  GiSolarPower,
+  GiGreenhouse,
+  GiFactory,
+  GiShakingHands,
+} from "react-icons/gi";
+import { MdOutlineLocalShipping, MdOutlineAddBusiness } from "react-icons/md";
+import { IoMdGlobe } from "react-icons/io";
 
 const CountUpComponent = () => {
   return (
@@ -11,26 +19,41 @@ const CountUpComponent = () => {
           {/* <i class="fab fa-house fa-4x"></i> */}
           {/* <img src="/images-logos/png/001-eco-house.png" alt="" /> */}
 
-          <GiGreenhouse style={{ fontSize: "80px" }} />
+          <GiFactory style={{ fontSize: "80px" }} />
           <div class="counter" data-target="60000">
-            <CountUp end={50} duration={2.75} />+
+            <CountUp end={3} duration={2.75} />
+            GW
           </div>
-          <h3>INSTALLED CAPACITY</h3>
+          <h3>GLOBAL MODULE CAPACITY</h3>
         </div>
         <div>
-          <GiSolarPower style={{ fontSize: "80px" }} />
+          <MdOutlineLocalShipping style={{ fontSize: "80px" }} />
           <div class="counter" data-target="15000">
-            <CountUp end={12000} duration={2.75} />+
+            <CountUp end={2} duration={2.75} /> GW
           </div>
-          <h3>KW INSTALLED</h3>
+          <h3>GLOBAL SHIPMENT</h3>
         </div>
 
         <div>
-          <GiEcology style={{ fontSize: "80px" }} />
+          <MdOutlineAddBusiness style={{ fontSize: "80px" }} />
           <div class="counter" data-target="5000">
-            <CountUp end={100} duration={2.75} />+
+            <CountUp end={10} duration={2.75} /> +
           </div>
-          <h3>CUSTOMERS GLOBALLY</h3>
+          <h3>SALES & SERVICE OFFICES</h3>
+        </div>
+        <div>
+          <IoMdGlobe style={{ fontSize: "80px" }} />
+          <div class="counter" data-target="5000">
+            <CountUp end={200} duration={2.75} />+
+          </div>
+          <h3>COUNTRIES</h3>
+        </div>
+        <div>
+          <GiShakingHands style={{ fontSize: "80px" }} />
+          <div class="counter" data-target="5000">
+            <CountUp end={100} duration={2.75} /> +
+          </div>
+          <h3>PARTNERS</h3>
         </div>
       </div>
     </section>

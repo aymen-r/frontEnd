@@ -20,6 +20,16 @@ export const categories = [
     image: "/images-logos/batteries-bg.jpg",
     title: "Solar Batteries",
   },
+  {
+    id: 4,
+    image: "/images-logos/combiner1.jpg",
+    title: "PV Combiner Box",
+  },
+  {
+    id: 5,
+    image: "/images-logos/pv-accessory1.jpg",
+    title: "PV Accessory",
+  },
 ];
 
 const useStyles = makeStyles({
@@ -32,7 +42,10 @@ const useStyles = makeStyles({
 const RangeProducts = () => {
   const classes = useStyles();
   return (
-    <div className="container" style={{ backgroundColor: "#1c1c1c" }}>
+    <div
+      className="container"
+      style={{ backgroundColor: "#1c1c1c", paddingTop: "100px" }}
+    >
       <Grid
         container
         spacing={4}
@@ -45,15 +58,15 @@ const RangeProducts = () => {
           </Grid>
         ))}
       </Grid>
-      <div class="text-wrap">
+      {/* <div class="text-wrap">
         <p className="text-base">
           WE offers a complete range of photovoltaic inverters for your solar
           panels at the best prices. You want to buy your inverter, benefit from
           the best prices, the best warranty and flexible delivery? Then chose
           the No1 of photovoltaic products. These solar inverters
         </p>
-      </div>
-      <CountUp />
+      </div> */}
+      {/* <CountUp /> */}
       <div className="more-accessories">
         <p className="text-base">
           Our product catalogue contains also - high-quality structure &
