@@ -28,7 +28,7 @@
 }
 .galerie .gal-item:nth-child(1) {
   background: linear-gradient(to bottom, rgb(0 0 0 / 70%), rgba(0, 0, 0, 0.2)),
-    url(bg5.jpg);
+    url(bg1.jpg);
   background-size: cover;
   background-position: left;
 }
@@ -49,7 +49,7 @@
 }
 .galerie .gal-item:nth-child(5) {
   background: linear-gradient(to bottom, rgb(0 0 0 / 70%), rgba(0, 0, 0, 0.2)),
-    url(bg1.jpg);
+    url(bg5.jpg);
   background-size: cover;
   background-position: left;
 }

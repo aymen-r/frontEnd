@@ -12,7 +12,6 @@ const NavDesktop = () => {
   const [stick, setStick] = useState(false);
   const [open, setOpen] = useState(false);
 
-  console.log(stick);
   const changeNavbarColor = () => {
     if (window.scrollY >= 80) {
       setStick(true);
@@ -28,7 +27,7 @@ const NavDesktop = () => {
           <div className="left flex">
             <Link to={"/"}>
               <div className="logo">
-                <img src="/images-logos/logo -thager.png" alt="" srcset="" />
+                <img src="/logo1.png" alt="" srcset="" />
               </div>
             </Link>
           </div>

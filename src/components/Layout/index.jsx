@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import NavDesktop from "../Navbar";
-import Footer from "../footer/Footer";
+import Footer from "../footer2/Footer";
 
 const Layout = (props) => {
   useEffect(() => {

@@ -1,19 +1,24 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import "./style.css";
-import CountUp from "react-countup";
-import {
-  GiEcology,
-  GiSolarPower,
-  GiGreenhouse,
-  GiFactory,
-  GiShakingHands,
-} from "react-icons/gi";
+import CountUp, { useCountUp } from "react-countup";
+import { GiFactory, GiShakingHands } from "react-icons/gi";
 import { MdOutlineLocalShipping, MdOutlineAddBusiness } from "react-icons/md";
 import { IoMdGlobe } from "react-icons/io";
+import { useIsVisible } from "react-is-visible";
+
+// const SimpleHook = () => {
+//   useCountUp({ ref: "counter", end: 34567 });
+//   return <span id="counter" />;
+// };
 
 const CountUpComponent = () => {
+  const nodeRef = useRef();
+  const isVisible = useIsVisible(nodeRef);
+  console.log(isVisible);
+  const [view, setView] = useState(false);
+
   return (
-    <section class="counters">
+    <section class="counters" ref={nodeRef}>
       <div class="container">
         <div>
           {/* <i class="fab fa-house fa-4x"></i> */}
@@ -21,7 +26,7 @@ const CountUpComponent = () => {
 
           <GiFactory style={{ fontSize: "80px" }} />
           <div class="counter" data-target="60000">
-            <CountUp end={3} duration={2.75} />
+            <CountUp start={isVisible ? null : 0} end={3} duration={2.75} />
             GW
           </div>
           <h3>GLOBAL MODULE CAPACITY</h3>
@@ -29,7 +34,7 @@ const CountUpComponent = () => {
         <div>
           <MdOutlineLocalShipping style={{ fontSize: "80px" }} />
           <div class="counter" data-target="15000">
-            <CountUp end={2} duration={2.75} /> GW
+            <CountUp start={isVisible ? null : 0} end={2} duration={2.75} /> GW
           </div>
           <h3>GLOBAL SHIPMENT</h3>
         </div>
@@ -37,21 +42,21 @@ const CountUpComponent = () => {
         <div>
           <MdOutlineAddBusiness style={{ fontSize: "80px" }} />
           <div class="counter" data-target="5000">
-            <CountUp end={10} duration={2.75} /> +
+            <CountUp start={isVisible ? null : 0} end={10} duration={2.75} /> +
           </div>
           <h3>SALES & SERVICE OFFICES</h3>
         </div>
         <div>
           <IoMdGlobe style={{ fontSize: "80px" }} />
           <div class="counter" data-target="5000">
-            <CountUp end={200} duration={2.75} />+
+            <CountUp start={isVisible ? null : 0} end={200} duration={2.75} />+
           </div>
           <h3>COUNTRIES</h3>
         </div>
         <div>
           <GiShakingHands style={{ fontSize: "80px" }} />
           <div class="counter" data-target="5000">
-            <CountUp end={100} duration={2.75} /> +
+            <CountUp start={isVisible ? null : 0} end={100} duration={2.75} /> +
           </div>
           <h3>PARTNERS</h3>
         </div>

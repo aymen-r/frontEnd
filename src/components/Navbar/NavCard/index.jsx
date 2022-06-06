@@ -2,7 +2,6 @@ import React from "react";
 import "./style.css";
 
 const NavCard = ({ item }) => {
-  console.log(item);
   return (
     <div class="container">
       <div class="image">
