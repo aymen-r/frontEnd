@@ -5,6 +5,7 @@ import { Route, Routes, BrowserRouter as Router } from "react-router-dom";
 
 import HomePage from "./pages/Home";
 import ProductsPage from "./pages/ProductsPage";
+import ScrollButton from "./components/Home/ScrollToTop";
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
           <Route exact path="/" element={<HomePage />} />
           <Route exact path="/products" element={<ProductsPage />} />
         </Routes>
+        <ScrollButton />
       </Router>
     </>
   );

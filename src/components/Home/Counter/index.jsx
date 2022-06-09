@@ -1,6 +1,6 @@
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import "./style.css";
-import CountUp, { useCountUp } from "react-countup";
+import CountUp from "react-countup";
 import { GiFactory, GiShakingHands } from "react-icons/gi";
 import { MdOutlineLocalShipping, MdOutlineAddBusiness } from "react-icons/md";
 import { IoMdGlobe } from "react-icons/io";
@@ -14,8 +14,6 @@ import { useIsVisible } from "react-is-visible";
 const CountUpComponent = () => {
   const nodeRef = useRef();
   const isVisible = useIsVisible(nodeRef);
-  console.log(isVisible);
-  const [view, setView] = useState(false);
 
   return (
     <section class="counters" ref={nodeRef}>
@@ -26,7 +24,7 @@ const CountUpComponent = () => {
 
           <GiFactory style={{ fontSize: "80px" }} />
           <div class="counter" data-target="60000">
-            <CountUp start={isVisible ? null : 0} end={3} duration={2.75} />
+            <CountUp start={isVisible ? null : 0} end={3} duration={2} />
             GW
           </div>
           <h3>GLOBAL MODULE CAPACITY</h3>
@@ -34,7 +32,7 @@ const CountUpComponent = () => {
         <div>
           <MdOutlineLocalShipping style={{ fontSize: "80px" }} />
           <div class="counter" data-target="15000">
-            <CountUp start={isVisible ? null : 0} end={2} duration={2.75} /> GW
+            <CountUp start={isVisible ? null : 0} end={2} duration={2} /> GW
           </div>
           <h3>GLOBAL SHIPMENT</h3>
         </div>
@@ -42,21 +40,21 @@ const CountUpComponent = () => {
         <div>
           <MdOutlineAddBusiness style={{ fontSize: "80px" }} />
           <div class="counter" data-target="5000">
-            <CountUp start={isVisible ? null : 0} end={10} duration={2.75} /> +
+            <CountUp start={isVisible ? null : 0} end={10} duration={2} /> +
           </div>
           <h3>SALES & SERVICE OFFICES</h3>
         </div>
         <div>
           <IoMdGlobe style={{ fontSize: "80px" }} />
           <div class="counter" data-target="5000">
-            <CountUp start={isVisible ? null : 0} end={200} duration={2.75} />+
+            <CountUp start={isVisible ? null : 0} end={200} duration={2} />+
           </div>
           <h3>COUNTRIES</h3>
         </div>
         <div>
           <GiShakingHands style={{ fontSize: "80px" }} />
           <div class="counter" data-target="5000">
-            <CountUp start={isVisible ? null : 0} end={100} duration={2.75} /> +
+            <CountUp start={isVisible ? null : 0} end={100} duration={2} /> +
           </div>
           <h3>PARTNERS</h3>
         </div>

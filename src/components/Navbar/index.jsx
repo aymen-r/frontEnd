@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import NavCard from "./NavCard";
-import { data } from "./NavCard/data";
+// import NavCard from "./NavCard";
+// import { data } from "./NavCard/data";
 import "./style.css";
+import "./nav2.css";
+
 import { AiOutlineGlobal } from "react-icons/ai";
 import { RiProfileLine } from "react-icons/ri";
 import { IoIosArrowDown } from "react-icons/io";
@@ -75,7 +77,72 @@ const NavDesktop = () => {
             </div>
           </div>
         </nav>
-        <nav className="navbar-second">
+        <nav class="nav-bar">
+          <ul>
+            <li>
+              <Link to={"/"} className="active">
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link to={"/products"}>
+                Products & Solutions <i className="fa-solid fa-angle-down"></i>
+              </Link>
+              <div
+                class="mega-menu"
+                style={{
+                  display: "grid",
+                  gridTemplateColumns: "repeat(2,1fr)",
+                }}
+              >
+                <div class="inner-mega-menu">
+                  <p>Solar Panels</p>
+                  <p>Solar Inverters </p>
+                  <p>Solar Batteries</p>
+                  <p>Solar Street Lights</p>
+                </div>
+                <div class="inner-mega-menu">
+                  <p>PV COMBINER BOX & CABLES</p>
+                  <p>STRUCTURE & FIXING</p>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <a href="#">ON the Way</a>
+            </li>
+
+            <li>
+              {" "}
+              <a href="#">Service & Support</a>
+              <i className=" fa-solid fa-angle-down"></i>
+              <div
+                class="mega-menu"
+                style={{
+                  display: "grid",
+                  gridTemplateColumns: "repeat(3,1fr)",
+                }}
+              >
+                <div class="inner-mega-menu">
+                  <p>Get an estimate</p>
+                </div>
+                <div class="inner-mega-menu">
+                  <p>Track your order</p>
+                </div>
+                <div class="inner-mega-menu">
+                  <p>Downland data sheet</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <a href="#">News & Videos</a>
+            </li>
+            <li>
+              <a href="#">Contact Us</a>
+            </li>
+          </ul>
+        </nav>
+        {/* <nav className="navbar-second">
           <ul className="navbar-second-list flex">
             <li>
               <Link to={"/"} className="active">
@@ -92,24 +159,6 @@ const NavDesktop = () => {
                     </Link>
                   </li>
                 ))}
-                {/* <li>
-                  <Link to={"/"}>Solar Panels</Link>
-                </li>
-                <li>
-                  <Link to={"/"}>Solar Inverters</Link>
-                </li>
-                <li>
-                  <Link to={"/"}>Solar Batteries</Link>
-                </li>
-                <li>
-                  <Link to={"/"}>Solar Street light</Link>
-                </li>
-                <li>
-                  <Link to={"/"}>PV Combiner Box & Cables</Link>
-                </li>
-                <li>
-                  <Link to={"/"}>Structure & Fixing</Link>
-                </li> */}
               </ul>
               <i className="fa-solid fa-angle-down"></i>
             </li>
@@ -127,7 +176,7 @@ const NavDesktop = () => {
               <a href="#">Contact Us</a>
             </li>
           </ul>
-        </nav>
+        </nav> */}
       </div>
     </>
   );

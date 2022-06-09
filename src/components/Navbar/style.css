@@ -199,8 +199,8 @@ span {
   cursor: pointer;
 }
 .logo img {
-  margin-top: 10px;
-  height: 90px;
+  margin-top: 20px;
+  height: 70px;
 }
 .navbar-second-list {
   list-style: none;
@@ -224,31 +224,37 @@ span {
 }
 .navbar-second-list > li {
   display: block;
-  /* height: 100%; */
+  height: 100%;
 }
-.products {
+/* .products {
   transition: 2s;
-}
+} */
 .sub-menu {
-  display: none;
+  /* display: none; */
   opacity: 0;
   list-style-type: none;
   position: absolute;
   top: 0;
   left: 0;
   width: 100vw;
-
-  background-color: #555;
+  transform: translateY(-10px);
+  transition: opacity 950ms ease-in-out, transform 950ms ease-in-out;
+  background-color: rgba(249, 249, 249, 0.687);
   padding: 5px 0;
-  /* transition: 2s all ease 0s, visibility 0s linear 1s, z-index 0s linear 0.01s; */
-  /* transition: 2s ease-in-out; */
-  transition: height 0.3s;
+}
+.products:hover .sub-menu-open {
+  opacity: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  height: calc(60vh - 110px);
+  z-index: 99999;
 }
 .sub-menu li {
   position: relative;
   background-color: transparent;
   width: 30%;
-  /* transition: 2s all ease 0s, visibility 0s linear 1s, z-index 0s linear 0.01s; */
 }
 
 .navbar-second-list > li > .sub-menu {
@@ -273,15 +279,7 @@ span {
   justify-content: space-evenly;
   align-items: center;
 } */
-.products:hover .sub-menu {
-  opacity: 1;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: center;
-  height: calc(100vh - 110px);
-  z-index: 99999;
-}
+
 .lang {
   position: relative;
   cursor: pointer;
@@ -304,3 +302,26 @@ span {
 .lang-open {
   display: block;
 }
+/*  navbar dropdown */
+/* .dropdown {
+  position: relative;
+}
+.dropdown-menu {
+  position: absolute;
+  left: 0;
+
+  top: calc(100% + 0.25rem);
+  background-color: white;
+  padding: 0.75rem;
+  border-radius: 0.25rem;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-10px);
+  transition: opacity 350ms ease-in-out, transform 350ms ease-in-out;
+}
+.dropdown:hover > .dropdown-menu {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+} */

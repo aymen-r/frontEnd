@@ -7,6 +7,7 @@ const CardAdress = ({ el }) => {
     <div className="box">
       <div className="head">
         <a
+          className="icon-adress"
           href="https://www.google.com/maps/place/Thagher+Alrafedain+%7C+Tokkma/@25.272742,55.308361,4z/data=!4m5!3m4!1s0x0:0x71eee59a637d807f!8m2!3d25.272742!4d55.3083607?hl=en"
           target="_blank"
           rel="noreferrer"

@@ -1,0 +1,78 @@
+.nav-bar {
+  width: 100%;
+  background-color: transparent;
+  height: 75px;
+  padding: 10px 0;
+  box-sizing: border-box;
+  border: none;
+}
+.nav-bar ul {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+  list-style: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  /* letter-spacing: 2px; */
+  position: relative;
+}
+.nav-bar ul li {
+  height: 100%;
+  /* width: 120px; */
+  float: left;
+  text-align: center;
+  color: white;
+  padding: 15px 0;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+.nav-bar ul li:last-child {
+  margin-right: 0;
+}
+.nav-bar ul li:hover {
+  color: #ffce34;
+}
+.nav-bar ul li:hover .mega-menu {
+  color: black;
+}
+
+/* mega menu */
+.mega-menu {
+  border-radius: 0 0 10px 10px;
+  position: absolute;
+  top: 65px;
+  left: 0;
+  width: 100%;
+  /* height: 250px; */
+  background: rgba(252, 252, 252, 0.9);
+  transition: 0.6s all ease;
+  box-sizing: border-box;
+  visibility: hidden;
+  opacity: 0;
+}
+.inner-mega-menu {
+  text-align: left;
+
+  /* width: 50%; */
+
+  margin: 5%;
+}
+.inner-mega-menu:last-child {
+  margin-right: 0%;
+}
+.inner-mega-menu p {
+  padding: 10px 0;
+  transition: 0.6s all ease;
+}
+.inner-mega-menu p:hover {
+  color: #ffce34;
+}
+
+.nav-bar ul li:hover .mega-menu {
+  visibility: visible;
+  opacity: 1;
+  transition: 0.6s all ease;
+}

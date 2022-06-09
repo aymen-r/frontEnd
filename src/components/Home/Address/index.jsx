@@ -2,12 +2,12 @@ import { Grid } from "@mui/material";
 import React from "react";
 import CardAdress from "./adressCard/CardAdress";
 import "./style.css";
+const mainCard = {
+  id: 1,
+  title: "Main Office",
+  text: " THAGER AL RAFEDAIN GENERAL TRADING LLC Twin Tower _ Office 1504B (15 Floor) Baniyas Road,Deira, Dubai, UAE",
+};
 const cards = [
-  {
-    id: 1,
-    title: "Main Office",
-    text: " THAGER AL RAFEDAIN GENERAL TRADING LLC Twin Tower _ Office 1504B (15 Floor) Baniyas Road,Deira, Dubai, UAE",
-  },
   {
     id: 2,
     title: "Show Room - Dubai",
@@ -23,12 +23,17 @@ const cards = [
 const Address = () => {
   return (
     <div
-      className="container offices"
+      className="container"
       style={{ backgroundColor: "#1c1c1c", padding: "100px 10%" }}
     >
-      {cards.map((el) => (
-        <CardAdress key={el.id} el={el} />
-      ))}
+      <div className="main-office">
+        <CardAdress el={mainCard} />
+      </div>
+      <div className="offices">
+        {cards.map((el) => (
+          <CardAdress key={el.id} el={el} />
+        ))}
+      </div>
     </div>
   );
 };

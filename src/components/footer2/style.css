@@ -50,15 +50,15 @@ footer {
   top: -10px;
 }
 
-.left .content .social {
+.f-left .content .social {
   margin: 20px 0 0 0;
 }
 
-.left .content .social a {
+.f-left .content .social a {
   padding: 0 2px;
 }
 
-.left .content .social a span {
+.f-left .content .social a span {
   height: 40px;
   width: 40px;
   background: transparent;
@@ -70,7 +70,7 @@ footer {
   border: 1px solid #656565;
 }
 
-.left .content .social a span:hover {
+.f-left .content .social a span:hover {
   background: #ffce34;
 }
 

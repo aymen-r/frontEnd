@@ -18,32 +18,70 @@ section {
   align-items: center;
   padding-bottom: 100px;
 
-  height: 100vh;
+  height: 110vh;
   background-size: cover !important;
-  background-position: center !important;
+  background-position: top !important;
   /* background: linear-gradient(to right, #0d00fd48, #ff04046b); */
 }
 
 .slide .content {
   width: 45rem;
 }
-.slide .content3 {
+/* .slide .content3 {
   text-align: right;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  align-items: flex-end;
-  width: 50rem;
-}
+} */
 
-.slide .content3 h3,
 .slide .content h3 {
   font-size: 2.5rem;
   text-transform: capitalize;
   font-weight: 700;
   color: rgb(255, 255, 255);
   font-family: Raleway;
+  position: absolute;
+  width: 40%;
+
   /* color: #fff; */
+}
+
+/* slide 1 */
+
+.content1 img {
+  position: absolute;
+  right: 10%;
+}
+.animate11 {
+  right: 0 !important;
+  transition: 1s all ease-in-out;
+}
+
+/* slide 2 */
+.sl2-hd {
+  top: -10%;
+}
+.content2 .sl2-bd {
+  right: 5%;
+  top: 100%;
+}
+.animate21 {
+  right: 5%;
+  top: 30% !important;
+  transition: 1s all ease-in-out;
+}
+.animate22 {
+  right: 5%;
+  top: 35% !important;
+  transition: 1s all ease-in-out;
+}
+/* slide 3 */
+.content3 h3 {
+  right: -150%;
+  /* top: 100%; */
+}
+.animate3 {
+  top: 50% !important;
+  right: 50% !important;
+
+  transition: 1s all ease-in-out;
 }
 
 .slide .content3 p,
@@ -83,26 +121,4 @@ section {
   section {
     padding: 3rem 2rem;
   }
-}
-.content3 .btna {
-  padding: 15px 25px;
-  display: inline-block;
-  text-align: center;
-  padding: 17px 20px;
-  border-radius: 0px;
-  line-height: 1.2;
-  letter-spacing: 2px;
-  border: 0px;
-  width: 30%;
-  transition: all 0.4s ease 0s;
-  font-size: 16px;
-  text-transform: uppercase;
-  font-weight: 600;
-  background-color: #ffce34;
-  color: rgb(255, 255, 255);
-  margin-top: 50px;
-}
-.content .btna:hover {
-  color: #ffce34;
-  background-color: rgb(255, 255, 255);
 }
