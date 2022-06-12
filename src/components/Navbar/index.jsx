@@ -16,6 +16,10 @@ import image5 from "../Home/ProdSolutionSlides/solar-energy.svg";
 import { GiStreetLight } from "react-icons/gi";
 import { MdConstruction } from "react-icons/md";
 
+import trackImg from "./order-tracking.png";
+import estimateImg from "./budget.png";
+import folderImg from "./folder.png";
+
 const NavDesktop = () => {
   const [stick, setStick] = useState(false);
   const [open, setOpen] = useState(false);
@@ -143,15 +147,19 @@ const NavDesktop = () => {
                 style={{
                   display: "grid",
                   gridTemplateColumns: "repeat(3,1fr)",
+                  gap: "30px",
                 }}
               >
-                <div class="inner-mega-menu">
+                <div class="inner-mega-menu-item">
+                  <img src={estimateImg} alt="" />
                   <p>Get an estimate</p>
                 </div>
-                <div class="inner-mega-menu">
+                <div class="inner-mega-menu-item">
+                  <img src={trackImg} alt="" />
                   <p>Track your order</p>
                 </div>
-                <div class="inner-mega-menu">
+                <div class="inner-mega-menu-item">
+                  <img src={folderImg} alt="" />
                   <p>Downland data sheet</p>
                 </div>
               </div>
