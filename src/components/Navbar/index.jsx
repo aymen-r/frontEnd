@@ -1,14 +1,20 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-// import NavCard from "./NavCard";
-// import { data } from "./NavCard/data";
 import "./style.css";
 import "./nav2.css";
 
-import { AiOutlineGlobal } from "react-icons/ai";
+import { AiOutlineGlobal, AiFillCaretRight } from "react-icons/ai";
 import { RiProfileLine } from "react-icons/ri";
 import { IoIosArrowDown } from "react-icons/io";
 import SearchBox from "./SearchBox";
+
+// submenu
+import image1 from "../Home/ProdSolutionSlides/solar-energy-panel.svg";
+import image2 from "../Home/ProdSolutionSlides/icons8.png";
+import image3 from "../Home/ProdSolutionSlides/setting.svg";
+import image5 from "../Home/ProdSolutionSlides/solar-energy.svg";
+import { GiStreetLight } from "react-icons/gi";
+import { MdConstruction } from "react-icons/md";
 
 const NavDesktop = () => {
   const [stick, setStick] = useState(false);
@@ -33,19 +39,6 @@ const NavDesktop = () => {
               </div>
             </Link>
           </div>
-          {/* <div className="search-box">
-            <button className="btn-search">
-              <i className="fas fa-search"></i>
-            </button>
-            <input
-              type="text"
-              className="input-search"
-              placeholder="Type to Search..."
-            />
-          </div> */}
-          {/* <div class="search__container">
-            <input class="search__input" type="text" placeholder="Search" />
-          </div> */}
           <SearchBox />
           <div className="right flex">
             <div className="nav-link-top flex">
@@ -78,41 +71,70 @@ const NavDesktop = () => {
           </div>
         </nav>
         <nav class="nav-bar">
-          <ul>
-            <li>
+          <ul className="navbar-list">
+            <li className="navbar-item">
               <Link to={"/"} className="active">
                 Home
               </Link>
             </li>
-            <li>
+            <li className="navbar-item">
               <Link to={"/products"}>
                 Products & Solutions <i className="fa-solid fa-angle-down"></i>
               </Link>
-              <div
-                class="mega-menu"
-                style={{
-                  display: "grid",
-                  gridTemplateColumns: "repeat(2,1fr)",
-                }}
-              >
-                <div class="inner-mega-menu">
-                  <p>Solar Panels</p>
-                  <p>Solar Inverters </p>
-                  <p>Solar Batteries</p>
-                  <p>Solar Street Lights</p>
-                </div>
-                <div class="inner-mega-menu">
-                  <p>PV COMBINER BOX & CABLES</p>
-                  <p>STRUCTURE & FIXING</p>
-                </div>
+              <div class="mega-menu">
+                <ul class="inner-mega-menu">
+                  <li className="inner-item">
+                    <img className="menu-image" src={image1} alt="" />
+                    <p> Solar Panels</p>
+                    <ul className="innermenu2">
+                      <li className="innermenu2-item">Half Cell</li>
+                      <li className="innermenu2-item">Bifacial</li>
+                    </ul>
+                    <AiFillCaretRight className="right-arrow" />
+                  </li>
+                  <li className="inner-item">
+                    <img className="menu-image" src={image2} alt="" />
+                    <p>Solar Inverters</p>
+                    <ul className="innermenu2">
+                      <li className="innermenu2-item">Off Grid</li>
+                      <li className="innermenu2-item">On Grid</li>
+                      <li className="innermenu2-item">Pump</li>
+                    </ul>
+                    <AiFillCaretRight className="right-arrow" />
+                  </li>
+                  <li className="inner-item">
+                    <img className="menu-image" src={image5} alt="" />
+                    <p>Solar Batteries</p>
+                    <ul className="innermenu2">
+                      <li className="innermenu2-item">AGM Batteries</li>
+                      <li className="innermenu2-item">Lithium Batteries</li>
+                      <li className="innermenu2-item">Gel Batteries</li>
+                      <li className="innermenu2-item">Tubular Battery</li>
+                    </ul>
+                    <AiFillCaretRight className="right-arrow" />
+                  </li>
+                  <li className="inner-item">
+                    <GiStreetLight className="menu-image" />
+                    <p>Solar Street Lights</p>
+                  </li>
+                  <li className="inner-item">
+                    {" "}
+                    <img className="menu-image" src={image3} alt="" />
+                    <p> PV COMBINER BOX & CABLES</p>
+                  </li>
+                  <li className="inner-item">
+                    <MdConstruction className="menu-image" />
+                    <p> STRUCTURE & FIXING</p>
+                  </li>
+                </ul>
               </div>
             </li>
 
-            <li>
+            <li className="navbar-item">
               <a href="#">ON the Way</a>
             </li>
 
-            <li>
+            <li className="navbar-item">
               {" "}
               <a href="#">Service & Support</a>
               <i className=" fa-solid fa-angle-down"></i>
@@ -134,49 +156,14 @@ const NavDesktop = () => {
                 </div>
               </div>
             </li>
-            <li>
+            <li className="navbar-item">
               <a href="#">News & Videos</a>
             </li>
-            <li>
+            <li className="navbar-item">
               <a href="#">Contact Us</a>
             </li>
           </ul>
         </nav>
-        {/* <nav className="navbar-second">
-          <ul className="navbar-second-list flex">
-            <li>
-              <Link to={"/"} className="active">
-                Home
-              </Link>
-            </li>
-            <li className="flex products">
-              <Link to={"/products"}>Products & Solutions</Link>
-              <ul className="sub-menu sub-menu-open">
-                {data.map((el) => (
-                  <li key={el.id}>
-                    <Link to={"/products"}>
-                      <NavCard item={el} />
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-              <i className="fa-solid fa-angle-down"></i>
-            </li>
-            <li>
-              <a href="#">ON the Way</a>
-            </li>
-            <li>
-              <a href="#">Service & Support</a>
-              <i className=" fa-solid fa-angle-down"></i>
-            </li>
-            <li>
-              <a href="#">News & Videos</a>
-            </li>
-            <li>
-              <a href="#">Contact Us</a>
-            </li>
-          </ul>
-        </nav> */}
       </div>
     </>
   );

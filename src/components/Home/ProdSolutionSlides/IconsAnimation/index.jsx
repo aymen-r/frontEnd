@@ -2,7 +2,6 @@ import React, { useEffect, useRef } from "react";
 import image1 from "../solar-energy-panel.svg";
 import image2 from "../icons8.png";
 import image3 from "../setting.svg";
-import image4 from "../street-light.svg";
 import image5 from "../solar-energy.svg";
 import { GiStreetLight } from "react-icons/gi";
 import { MdConstruction } from "react-icons/md";
