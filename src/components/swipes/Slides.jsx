@@ -34,10 +34,10 @@ const Slides = () => {
         spaceBetween={0}
         slidesPerView={1}
         loop={true}
-        // speed={2500}
-        // autoplay={{
-        //   disableOnInteraction: false,
-        // }}
+        speed={2500}
+        autoplay={{
+          disableOnInteraction: false,
+        }}
       >
         <SwiperSlide>
           <section

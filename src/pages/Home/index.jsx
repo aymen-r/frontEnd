@@ -10,6 +10,8 @@ import Address from "../../components/Home/Address";
 import ProdSolutionSlides from "../../components/Home/ProdSolutionSlides";
 import Map from "../../components/Home/Map/Map";
 
+import MyAnime from "../../components/Home/anime";
+
 const HomePage = () => {
   return (
     <Layout>
@@ -17,6 +19,7 @@ const HomePage = () => {
       {/* <ProdsGallerie /> */}
       <Welcome />
       <CountUp />
+
       <ProdSolutionSlides />
       {/* <RangeProducts /> */}
 

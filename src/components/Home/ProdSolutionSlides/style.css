@@ -16,7 +16,7 @@
   display: grid;
   height: 70vh;
   width: 100%;
-  grid-template-columns: 1fr 3fr 4fr;
+  grid-template-columns: 4fr 1fr 4fr;
   grid-gap: 10px;
 }
 
@@ -93,9 +93,22 @@
 .p-s-icons {
   display: grid;
   height: 100%;
-  grid-template-rows: repeat(4, 1fr);
+  grid-template-rows: repeat(6, 1fr);
   grid-gap: 10px;
+  align-self: center;
+  justify-content: center;
 }
 .p-s-video img {
   width: 100%;
+}
+/* icons animation */
+.p-s-icons .p-s-icon {
+  width: 3rem;
+  height: 3rem;
+  margin-top: auto;
+  margin-bottom: auto;
+  mix-blend-mode: lighten;
+  z-index: 2;
+  justify-content: center;
+  color: #ffce34;
 }

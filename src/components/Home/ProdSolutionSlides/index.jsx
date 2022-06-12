@@ -1,16 +1,12 @@
 import React from "react";
 import "./style.css";
 import image from "./factory.png";
-import image2 from "./icons8.png";
-import image3 from "./setting.svg";
-import image1 from "./solar-energy-panel.svg";
-import image5 from "./solar-energy.svg";
 
 import { Swiper, SwiperSlide } from "swiper/react/swiper-react";
 import SwiperCore, { Pagination, Autoplay } from "swiper";
 import "swiper/swiper-bundle.min.css";
 import "swiper/swiper.min.css";
-import { BsBatteryCharging } from "react-icons/bs";
+import IconsAnimation from "./IconsAnimation";
 
 import { EffectFade } from "swiper";
 SwiperCore.use([Pagination, Autoplay]);
@@ -20,12 +16,6 @@ const ProdSolutionSlides = () => {
     <div className="container solutions">
       <h2>Solutions</h2>
       <div className="p-s">
-        <div className="p-s-icons">
-          <img src={image1} alt="" style={{ width: "40px" }} />
-          <img src={image2} alt="" style={{ width: "40px" }} />
-          <img src={image5} alt="" style={{ width: "40px" }} />
-          <img src={image3} alt="" style={{ width: "40px" }} />
-        </div>
         <div className="p-s-slides">
           <div className="sw-slides">
             <Swiper
@@ -96,9 +86,28 @@ const ProdSolutionSlides = () => {
                   </div>
                 )}
               </SwiperSlide>
+              <SwiperSlide>
+                {({ isActive }) => (
+                  <div className={isActive ? "anim sol-slide" : "sol-slide"}>
+                    <h3>Solar Street Lights</h3>
+                    <p>Solar Street Lights</p>
+                    <button className="btna">show more</button>
+                  </div>
+                )}
+              </SwiperSlide>
+              <SwiperSlide>
+                {({ isActive }) => (
+                  <div className={isActive ? "anim sol-slide" : "sol-slide"}>
+                    <h3>Structure Fixing</h3>
+                    <p>Structure Fixing</p>
+                    <button className="btna">show more</button>
+                  </div>
+                )}
+              </SwiperSlide>
             </Swiper>
           </div>
         </div>
+        <IconsAnimation />
         <div className="p-s-video">
           <img src={image} alt="45s" />
         </div>
