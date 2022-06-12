@@ -26,11 +26,11 @@ const IconsAnimation = () => {
           return anime.random(-5, 5) + "rem";
         },
         scale: [0.95, 1.25],
-        rotate: 360,
+        rotate: 220,
         delay: function (el, index) {
-          return index * 80;
+          return index * 300;
         },
-        duration: 2000,
+        duration: 500,
         direction: "reverse",
         easing: "spring(1, 80, 10, 0)",
         // loop: true,
