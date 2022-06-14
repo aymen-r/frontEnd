@@ -70,7 +70,9 @@ const NavDesktop = () => {
               </ul>
             </div>
             <div className="nav-link-top">
-              <span>Login</span>
+              <Link to={"/login"}>
+                <span>Login</span>
+              </Link>
             </div>
           </div>
         </nav>
